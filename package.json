@@ -1,0 +1,34 @@
+{
+  "name": "shadils-web-chat",
+  "version": "1.0.0",
+  "description": "Real-time chat with Socket.IO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npx cap copy",
+    "android": "npx cap open android",
+    "electron-start": "electron .",
+    "electron-build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.shadils.webchat",
+    "win": {
+      "target": "portable",
+      "icon": "www/favicon.ico"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/cli": "^5.0.0",
+    "@capacitor/android": "^5.0.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
